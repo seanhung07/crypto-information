@@ -1,13 +1,8 @@
 # Crypto Information
-<<<<<<< HEAD
 
 https://seanhung07.github.io/crypto-information/
 
-<img src="https://github.com/seanhung07/crypto-information/website.png">
-=======
-
-
->>>>>>> ec4e8ffce890ab510ced8e2915ce5583b0d615f6
+<img src="https://github.com/seanhung07/crypto-information/blob/master/website.png">
 
 ## Available Scripts
 
