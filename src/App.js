@@ -9,6 +9,7 @@ import {Box, Container, CssBaseline,Paper,Typography} from "@material-ui/core";
 import React from 'react'
 import Divider from '@material-ui/core/Divider';
 import FearGreed from './components/Dominance/FearGreed';
+import Whale from './components/News/Whale';
 const theme = createMuiTheme({
   palette: {
     type: "dark"
@@ -80,6 +81,7 @@ function App(){
             <News />
             <div style={{ marginTop: 30 , marginBottom:10}}></div>
             <FearGreed/>
+            <Whale/>
           </Grid>
         </Grid>
       </Container>

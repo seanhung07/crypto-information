@@ -14,7 +14,6 @@ function FearGreed(){
             for(var i=0;i<30;i++){
                 fd.push(res['data']['data'][i]['value'])
                 var s = new Date(res['data']['data'][i]['timestamp']*1000).toLocaleDateString("en-US")
-                console.log(s)
                 dat.push(s);
             }
             setFddata(fd.reverse())
