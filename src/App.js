@@ -72,11 +72,11 @@ function App(){
       </Box> */}
       <Container >
         <Grid container spacing={3}>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <ConceptList /> 
             <Dominance />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <News />
             <div style={{ marginTop: 30 , marginBottom:10}}></div>
             <FearGreed/>
