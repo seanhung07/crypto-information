@@ -97,6 +97,7 @@ const useStyles2 = makeStyles({
   },
 });
 
+
 function BasicTable({data,columns}) {
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);

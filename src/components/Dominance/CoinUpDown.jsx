@@ -29,7 +29,6 @@ function CoinUpDown(){
     const chart= () =>{
         async function fetchData(){
             const res = await axios.get("https://dncapi.bqrank.net/api/home/global?webp=1")
-            console.log(res['data']['data']['risenum'])
             setUp(res['data']['data']['risenum'])
             setDown(res['data']['data']['fallnum'])
         }
