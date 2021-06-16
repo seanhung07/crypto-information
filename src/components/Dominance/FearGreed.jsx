@@ -31,7 +31,7 @@ function FearGreed(){
             </Card>
             <Line 
                 width={500}
-                height={100}
+                height={250}
                 data ={{
                     labels: date,
                     datasets: [{
