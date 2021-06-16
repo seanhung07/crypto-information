@@ -1,41 +1,24 @@
 import axios from 'axios'
-import React,{useEffect} from 'react';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import Paper from '@material-ui/core/Paper';
-const StyledTableCell = withStyles((theme) => ({
-  head: {
-    backgroundColor: theme.palette.common.grey,
-    color: theme.palette.common.white,
-  },
-  body: {
-    fontSize: 14,
-  },
-}))(TableCell);
+import React,{useEffect, useState} from 'react';
+import {Pie,Chart} from 'react-chartjs-2'
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 300,
-  },
-});
 
 function CoinUpDown(){
-  const classes = useStyles();
-    const [up, setUp] = React.useState(0);
-    const [down, setDown] = React.useState(0);
+    Chart.defaults.color = '#fefefe'
+    Chart.defaults.borderColor = '#686868'
+    const [coin, setCoin] = useState([])
     const chart= () =>{
         async function fetchData(){
+            let data=[]
             const res = await axios.get("https://dncapi.bqrank.net/api/home/global?webp=1")
-            setUp(res['data']['data']['risenum'])
-            setDown(res['data']['data']['fallnum'])
+            data.push(res['data']['data']['risenum'])
+            data.push(res['data']['data']['fallnum'])
+            setCoin(data)
         }
         fetchData()
         const interval=setInterval(()=>{
             fetchData();
-           },50000)
+           },30000)
              
            return()=>clearInterval(interval)
     }
@@ -44,15 +27,30 @@ function CoinUpDown(){
       }, []);
 
   return (
-    <TableContainer component={Paper} style={{marginBottom:10}}>
-      <Table className={classes.table} aria-label="customized table">
-        <TableHead>
-            <StyledTableCell>24H幣種漲跌分佈</StyledTableCell>
-            <StyledTableCell align="right" style={{color: "limegreen"}}>上漲數量： {up} </StyledTableCell>
-            <StyledTableCell align="right" style={{color: "#ff1a1a"}}>下跌數量： {down}</StyledTableCell>
-        </TableHead>
-      </Table>
-    </TableContainer>
+    <div>
+    <Pie
+      data = {{
+        labels: [
+          '上漲數量',
+          '下跌數量',
+        ],
+        datasets: [{
+          label: 'My First Dataset',
+          data: coin,
+          backgroundColor: [
+            '#00ff00',
+            '#cd0000',
+          ],
+          hoverOffset: 4
+        }]
+    }
+    }
+    width={500}
+	  height={300}
+    options={{ maintainAspectRatio: false }}
+      />
+
+    </div>
   );
 }
 

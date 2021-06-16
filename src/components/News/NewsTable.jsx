@@ -11,7 +11,7 @@ import { Link } from '@material-ui/core';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: '#1E1E2D',
+    backgroundColor: '#202020',
     color: theme.palette.common.white,
   },
   body: {

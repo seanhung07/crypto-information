@@ -4,7 +4,6 @@ import BasicTable from '../Concept/BasicTable'
 
 function ConceptList(){
     const [concepts,setConcepts] = useState([]);
-    const [translated, setTranslated] = useState("");
     const columns = [
         { 
           id: 'rank', 
@@ -30,7 +29,6 @@ function ConceptList(){
           label: '領漲'
         }
       ];
-    const newdata=[]
     useEffect(()=>{
         async function fetchData(){
             const request = await axios.get('https://dncapi.bqrank.net/api/concept/web-conceptlist?page=1&webp=1');

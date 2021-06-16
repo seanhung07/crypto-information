@@ -1,18 +1,19 @@
 import './App.css';
 import ConceptList from './components/Concept/ConceptList'
 import Dominance from './components/Dominance/Dominance'
+import CoinUpDown from './components/Dominance/CoinUpDown'
 import News from './components/News/News'
 import Grid from '@material-ui/core/Grid' 
 import {ThemeProvider, createMuiTheme,makeStyles} from '@material-ui/core/styles'
-import {Box, Container, CssBaseline,Paper,Typography} from "@material-ui/core";
-import React from 'react'
+import {Container, CssBaseline,Typography} from "@material-ui/core";
+import React,{useState} from 'react'
 import FearGreed from './components/Dominance/FearGreed';
-import Whale from './components/News/Whale';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import logo from '../src/assets/logo.png'
+import Market from './components/Dominance/Market';
 const theme = createMuiTheme({
   palette: {
     type: "dark"
@@ -52,10 +53,11 @@ const useStyles = makeStyles((theme) => ({
 
 function App(){
   const classes = useStyles();
+  const [active,setActive] = useState("First")
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative" style={{background: '#1E1E2D'}}>
+      <AppBar position="relative" style={{background: '#202020'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <div className="head">
@@ -67,46 +69,32 @@ function App(){
           </Typography>
         </Toolbar>
       </AppBar>
-      <div style={{ marginTop: 30 , marginBottom:10}}></div>
-      {/* <Container >
-      <Grid container direction="row" justify="flex-start" alignItems="stretch" spacing={3}>
-        <Grid item xs={6}>
-          <ConceptList /> 
-        </Grid>
-        <Grid item xs={6}>
-          <News />
-        </Grid>
-      </Grid>
-      <Grid container direction="row"   justify="flex-start"
-        alignItems="stretch" spacing={3}>
-        <Grid item xs={6}>
-          <Dominance />
-        </Grid>
-      </Grid>
-      </Container> */}
-       
-      {/* <Box display="flex" flexDirection="row" p={{xs: 2, sm: 3, md: 5} } >
-        <Box p={1} width="50%">
-          <ConceptList /> 
-          <Box p={1} pt={3}>
-            <Dominance />
-          </Box>
-        </Box>
-        <Box p={1} >
-          <News />
-        </Box>
-      </Box> */}
       <Container >
+      <div className="topnav" style={{ marginTop: 30 , marginBottom:10}}>
+        <Grid
+        container
+        spacing={0}
+        alignItems="center"
+        justify="center"
+        >
+          <Button onClick={()=>{ setActive("First")}}>漲跌分佈</Button>
+          <Button onClick={()=> setActive("Second")}>市場情況</Button>
+          <Button onClick={()=> setActive("Third")}>市占率</Button>
+          <Button onClick={()=> setActive("Fourth")}>貪婪指標</Button>
+        </Grid>
+        </div>
+        <div style={{ marginBottom:30}}>
+          {active === "First" && <CoinUpDown/>}
+          {active === "Second" && <Market/>}
+          {active === "Third" && <Dominance/>}
+          {active === "Fourth" && <FearGreed/>}
+        </div>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <ConceptList /> 
-            <Dominance />
           </Grid>
           <Grid item xs={12} sm={6}>
             <News />
-            <div style={{ marginTop: 30 , marginBottom:10}}></div>
-            <FearGreed/>
-            <Whale/>
           </Grid>
         </Grid>
       </Container>

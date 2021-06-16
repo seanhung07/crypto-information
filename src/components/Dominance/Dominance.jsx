@@ -1,9 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import DominanceChart from '../Dominance/DominanceChart'
-import CoinUpDown from './CoinUpDown';
-import Market from './Market';
-import FearGreed from './FearGreed';
 function Dominance(){
     const [chartData, setChartData] = useState({});
     const chart= () =>{
@@ -41,14 +38,9 @@ function Dominance(){
       }, []);
     return(
     <div>
-        <div style={{ marginTop: 20 , marginBottom:10, fontSize: 60}}>
-            <CoinUpDown/>
+        <div style={{ marginTop: 30 , marginBottom:20, fontSize: 50}}>
+            <DominanceChart data = {chartData}/>
         </div>
-        <div style={{ marginTop: 35 , marginBottom:10, fontSize: 50}}>
-            <Market/>   
-        </div>
-        <div style={{ marginTop: 30 , marginBottom:10, fontSize: 50}}></div>
-        <DominanceChart data = {chartData}/>
     </div>
     )
 }

@@ -24,7 +24,7 @@ const useStyles1 = makeStyles((theme) => ({
 }));
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: '#1E1E2D',
+    backgroundColor: '#202020',
     color: theme.palette.common.white,
   },
   body: {
@@ -101,7 +101,7 @@ const useStyles2 = makeStyles({
 function BasicTable({data,columns}) {
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(9);
 
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
@@ -166,7 +166,7 @@ function BasicTable({data,columns}) {
         <TableFooter>
           <TableRow>
             <TablePagination
-              rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
+              rowsPerPageOptions={[9, 15, 25, { label: 'All', value: -1 }]}
               colSpan={5}
               count={data.length}
               rowsPerPage={rowsPerPage}
