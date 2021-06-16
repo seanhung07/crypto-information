@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/crypto-information/static/css/main.4dc02520.chunk.css",
-    "main.js": "/crypto-information/static/js/main.e409a196.chunk.js",
-    "main.js.map": "/crypto-information/static/js/main.e409a196.chunk.js.map",
-    "runtime-main.js": "/crypto-information/static/js/runtime-main.b4646d18.js",
-    "runtime-main.js.map": "/crypto-information/static/js/runtime-main.b4646d18.js.map",
-    "static/js/2.ae3f23fa.chunk.js": "/crypto-information/static/js/2.ae3f23fa.chunk.js",
-    "static/js/2.ae3f23fa.chunk.js.map": "/crypto-information/static/js/2.ae3f23fa.chunk.js.map",
-    "static/js/3.c0cf5602.chunk.js": "/crypto-information/static/js/3.c0cf5602.chunk.js",
-    "static/js/3.c0cf5602.chunk.js.map": "/crypto-information/static/js/3.c0cf5602.chunk.js.map",
+    "main.css": "/crypto-information/static/css/main.473cb805.chunk.css",
+    "main.js": "/crypto-information/static/js/main.7631e3be.chunk.js",
+    "main.js.map": "/crypto-information/static/js/main.7631e3be.chunk.js.map",
+    "runtime-main.js": "/crypto-information/static/js/runtime-main.0dc9a098.js",
+    "runtime-main.js.map": "/crypto-information/static/js/runtime-main.0dc9a098.js.map",
+    "static/js/2.49dae8a1.chunk.js": "/crypto-information/static/js/2.49dae8a1.chunk.js",
+    "static/js/2.49dae8a1.chunk.js.map": "/crypto-information/static/js/2.49dae8a1.chunk.js.map",
+    "static/js/3.97b48be2.chunk.js": "/crypto-information/static/js/3.97b48be2.chunk.js",
+    "static/js/3.97b48be2.chunk.js.map": "/crypto-information/static/js/3.97b48be2.chunk.js.map",
     "index.html": "/crypto-information/index.html",
-    "static/css/main.4dc02520.chunk.css.map": "/crypto-information/static/css/main.4dc02520.chunk.css.map",
-    "static/js/2.ae3f23fa.chunk.js.LICENSE.txt": "/crypto-information/static/js/2.ae3f23fa.chunk.js.LICENSE.txt"
+    "static/css/main.473cb805.chunk.css.map": "/crypto-information/static/css/main.473cb805.chunk.css.map",
+    "static/js/2.49dae8a1.chunk.js.LICENSE.txt": "/crypto-information/static/js/2.49dae8a1.chunk.js.LICENSE.txt",
+    "static/media/logo.221fea2f.png": "/crypto-information/static/media/logo.221fea2f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4646d18.js",
-    "static/js/2.ae3f23fa.chunk.js",
-    "static/css/main.4dc02520.chunk.css",
-    "static/js/main.e409a196.chunk.js"
+    "static/js/runtime-main.0dc9a098.js",
+    "static/js/2.49dae8a1.chunk.js",
+    "static/css/main.473cb805.chunk.css",
+    "static/js/main.7631e3be.chunk.js"
   ]
 }
