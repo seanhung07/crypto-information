@@ -1,15 +1,18 @@
 import './App.css';
 import ConceptList from './components/Concept/ConceptList'
 import Dominance from './components/Dominance/Dominance'
-import CoinUpDown from './components/Dominance/CoinUpDown'
 import News from './components/News/News'
 import Grid from '@material-ui/core/Grid' 
 import {ThemeProvider, createMuiTheme,makeStyles} from '@material-ui/core/styles'
 import {Box, Container, CssBaseline,Paper,Typography} from "@material-ui/core";
 import React from 'react'
-import Divider from '@material-ui/core/Divider';
 import FearGreed from './components/Dominance/FearGreed';
 import Whale from './components/News/Whale';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import logo from '../src/assets/logo.png'
 const theme = createMuiTheme({
   palette: {
     type: "dark"
@@ -35,6 +38,16 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     margin: theme.spacing(2, 0),
   },
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+    textAlign: 'center',
+  },
 }));
 
 function App(){
@@ -42,7 +55,19 @@ function App(){
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Typography align="center" style={{ marginTop: 20 , marginBottom:10, fontSize: 50}}>Crypto Information</Typography>
+      <AppBar position="relative" style={{background: '#1E1E2D'}}>
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <div className="head">
+              <img src={logo} alt="logo"  width="40" height="40"/>
+            </div>
+          </IconButton>
+          <Typography variant="h4" className={classes.title}  style={{ marginTop: 20 , marginBottom:10}}>
+            Crypto Information
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <div style={{ marginTop: 30 , marginBottom:10}}></div>
       {/* <Container >
       <Grid container direction="row" justify="flex-start" alignItems="stretch" spacing={3}>
         <Grid item xs={6}>
