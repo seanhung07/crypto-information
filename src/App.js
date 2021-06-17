@@ -61,7 +61,7 @@ function App(){
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <div className="head">
-              <img src={logo} alt="logo"  width="40" height="40"/>
+              <img src={logo} alt="logo"  width="35" height="35"/>
             </div>
           </IconButton>
           <Typography variant="h4" className={classes.title}  style={{ marginTop: 20 , marginBottom:10}}>
@@ -77,7 +77,7 @@ function App(){
         alignItems="center"
         justify="center"
         >
-          <Button onClick={()=>{ setActive("First")}}>漲跌分佈</Button>
+          <Button onClick={()=> setActive("First")}>漲跌分佈</Button>
           <Button onClick={()=> setActive("Second")}>市場情況</Button>
           <Button onClick={()=> setActive("Third")}>市占率</Button>
           <Button onClick={()=> setActive("Fourth")}>貪婪指標</Button>

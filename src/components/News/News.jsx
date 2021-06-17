@@ -1,6 +1,10 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios'
 import NewsTable from './NewsTable';
+import { Typography,Box } from '@material-ui/core';
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
+let theme = createMuiTheme();
+theme = responsiveFontSizes(theme);
 function News(){
     const [data,setData] = useState([])
     useEffect(()=>{
@@ -16,7 +20,17 @@ function News(){
          return()=>clearInterval(interval)
     },[])
     return(
-        <NewsTable data={data}/>
+        <div>
+            <ThemeProvider theme={theme}>
+            <Typography variant="h4" style={{ marginTop: 20 , marginBottom:10}} >
+            <   Box fontWeight="fontWeightBold">今日新聞</Box>
+            </Typography>
+            <Typography variant="h7" style={{ marginTop: 20 , marginBottom:10}}>
+                <Box color="#c1b9bc">此表列出從鏈新聞取出的新聞</Box>
+            </Typography>
+            </ThemeProvider>
+            <NewsTable data={data}/>
+        </div>
     )
 }
 

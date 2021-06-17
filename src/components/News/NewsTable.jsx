@@ -40,15 +40,15 @@ function NewsTable({data}) {
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>資料來源: 鏈新聞</StyledTableCell>
             <StyledTableCell>日期</StyledTableCell>
+            <StyledTableCell></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((row) => (
             <StyledTableRow key={row.id}>
-              <StyledTableCell ><Link href={row.link} style={{color:'#fefefe'}}>{row.title.rendered}</Link></StyledTableCell>
               <StyledTableCell >{row.date[5]+row.date[6]}/{row.date[8]+row.date[9]}</StyledTableCell>
+              <StyledTableCell ><Link href={row.link} style={{color:'#fefefe'}}>{row.title.rendered}</Link></StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

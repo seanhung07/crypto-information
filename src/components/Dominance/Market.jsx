@@ -28,27 +28,27 @@ function Market(){
 
   return (
     <div>
-    <Pie
-      data = {{
-        labels: [
-          '看漲',
-          '空手',
-          '看跌'
-        ],
-        datasets: [{
-          data: data,
-          backgroundColor: [
-            '#00ff00',
-            '#696969',
-            '#cd0000',
+      <Pie
+        data = {{
+          labels: [
+            '看漲',
+            '空手',
+            '看跌'
           ],
-          hoverOffset: 4
-        }]
-    }
-    }
-    width={500}
-	  height={300}
-    options={{ maintainAspectRatio: false }}
+          datasets: [{
+            data: data,
+            backgroundColor: [
+              '#00ff00',
+              '#696969',
+              '#cd0000',
+            ],
+            hoverOffset: 4
+          }]
+      }
+      }
+        width={500}
+        height={300}
+        options={{ maintainAspectRatio: false }}
       />
 
     </div>
