@@ -7,7 +7,7 @@ let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 function News(){
     const [data,setData] = useState([])
-    useEffect(()=>{
+    const news = ()=>{
         async function fetchData(){
             const request = await axios.get('https://www.abmedia.io/wp-json/wp/v2/posts?categories_exclude=3818%2C3819%2C3820%2C3782%2C1&per_page=9');
             setData(request['data'])
@@ -18,6 +18,9 @@ function News(){
          },300000)
            
          return()=>clearInterval(interval)
+    }
+    useEffect(()=>{
+        news()
     },[])
     return(
         <div>

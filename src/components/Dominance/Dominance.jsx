@@ -4,7 +4,6 @@ import DominanceChart from '../Dominance/DominanceChart'
 function Dominance(){
     const [chartData, setChartData] = useState({});
     const chart= () =>{
-        
         async function fetchData(){
             let coins = []
             let percent = []
