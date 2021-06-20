@@ -14,7 +14,7 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
-import { TableHead } from '@material-ui/core';
+import { Link, TableHead } from '@material-ui/core';
 
 const useStyles1 = makeStyles((theme) => ({
   root: {
@@ -139,8 +139,8 @@ function BasicTable({data,columns}) {
               <TableCell>
                 {index+1+page*rowsPerPage}
               </TableCell>
-              <TableCell style={{ width: 400 }} >
-                {row.name}
+              <TableCell style={{ width: 400 }}>
+                 <Link href={`https://www.feixiaohao.com/concept/${row.id}.html`} style={{color:'#fefefe'}}>{row.name}</Link>
               </TableCell>
               <TableCell style={{width: 120 , color: Math.sign(row.change_percent) === -1 ? "#ff1a1a" : "limegreen"}}>
                 {row.change_percent}%
