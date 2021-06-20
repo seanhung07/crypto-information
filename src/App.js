@@ -40,7 +40,11 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2, 0),
   },
   root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
     flexGrow: 1,
+    borderRadius: "50%" 
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -70,19 +74,14 @@ function App(){
         </Toolbar>
       </AppBar>
       <Container >
-      <div className="topnav" style={{ marginTop: 30 , marginBottom:10}}>
-        <Grid
-        container
-        spacing={0}
-        alignItems="center"
-        justify="center"
-        >
-          <Button onClick={()=> setActive("First")}>漲跌分佈</Button>
-          <Button onClick={()=> setActive("Second")}>市場情況</Button>
-          <Button onClick={()=> setActive("Third")}>市占率</Button>
-          <Button onClick={()=> setActive("Fourth")}>貪婪指標</Button>
-        </Grid>
+      <Typography align='center'>
+        <div className={classes.root} style={{ marginTop: 30 , marginBottom:10 }}>
+            <Button variant="outlined" onClick={()=> setActive("First")}>漲跌分佈</Button>
+            <Button variant="outlined" onClick={()=> setActive("Second")}>市場情況</Button>
+            <Button variant="outlined" onClick={()=> setActive("Third")}>市占率</Button>
+            <Button variant="outlined" onClick={()=> setActive("Fourth")}>貪婪指標</Button>
         </div>
+      </Typography>
         <div style={{ marginBottom:30}}>
           {active === "First" && <CoinUpDown/>}
           {active === "Second" && <Market/>}
