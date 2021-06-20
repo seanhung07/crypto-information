@@ -28,7 +28,7 @@ function News(){
             <Typography variant="h4" style={{ marginTop: 20 , marginBottom:10}} >
             <   Box fontWeight="fontWeightBold">今日新聞</Box>
             </Typography>
-            <Typography variant="h7" style={{ marginTop: 20 , marginBottom:10}}>
+            <Typography variant="subtitle2" style={{ marginTop: 20 , marginBottom:10}}>
                 <Box color="#c1b9bc">此表列出從鏈新聞取出的新聞</Box>
             </Typography>
             </ThemeProvider>
