@@ -1,19 +1,19 @@
 import './App.css';
 import ConceptList from './components/Concept/ConceptList'
-import Dominance from './components/Dominance/Dominance'
-import CoinUpDown from './components/Dominance/CoinUpDown'
+import Dominance from './components/Chart/Dominance'
+import CoinUpDown from './components/Chart/CoinUpDown'
 import News from './components/News/News'
 import Grid from '@material-ui/core/Grid' 
 import {ThemeProvider, createMuiTheme,makeStyles} from '@material-ui/core/styles'
 import {Container, CssBaseline,Typography} from "@material-ui/core";
 import React,{useState} from 'react'
-import FearGreed from './components/Dominance/FearGreed';
+import FearGreed from './components/Chart/FearGreed';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import logo from '../src/assets/logo.png'
-import Market from './components/Dominance/Market';
+import Market from './components/Chart/Market';
 import Whale from './components/News/Whale';
 const theme = createMuiTheme({
   palette: {

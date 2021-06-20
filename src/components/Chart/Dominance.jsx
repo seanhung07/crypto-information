@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
-import DominanceChart from '../Dominance/DominanceChart'
+import DominanceChart from './DominanceChart'
 function Dominance(){
     const [chartData, setChartData] = useState({});
     const chart= () =>{
