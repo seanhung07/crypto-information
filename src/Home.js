@@ -14,6 +14,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import logo from '../src/assets/logo.png'
 import Market from './components/Chart/Market';
+import Whale from './components/News/Whale';
 const theme = createMuiTheme({
   palette: {
     type: "dark",
@@ -95,6 +96,7 @@ function Home(){
           </Grid>
           <Grid item xs={12} sm={6}>
             <News />
+            <Whale/>
           </Grid>
         </Grid>
       </Container>

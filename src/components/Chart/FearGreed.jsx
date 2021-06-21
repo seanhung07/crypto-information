@@ -27,7 +27,7 @@ function FearGreed(){
     return(
         <div>
             <Card>
-                <Typography align="center" style={{ marginTop: 5 , paddingBottom: 5, fontSize: 16}}>Extrem Fear: 0-25 |   Fear: 26-50 | Greed: 51-75 | Extrem Fear: 76-100</Typography>
+                <Typography align="center" style={{ marginTop: 5 , paddingBottom: 5, fontSize: 16}}>Extreme Fear: 0-25 |   Fear: 26-50 | Greed: 51-75 | Extreme Greed : 76-100</Typography>
             </Card>
             <Line 
                 width={500}
