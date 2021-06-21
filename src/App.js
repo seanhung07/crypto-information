@@ -1,16 +1,16 @@
 import './App.css';
-import { HashRouter,Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 import Home from './Home'
 import DefiData from './components/Defi/DefiData'
 
 function App(){
   return(
-    <Router>
+      <Router path={process.env.PUBLIC_URL + '/'}>
         <Switch>
-          <Route exact path="/crypto-information"  component={Home}/>
-          <Route exact path="/crypto-information/defi" component={DefiData}/>
+          <Route path="/crypto-information" exact component={Home}/>
+          <Route path="/crypto-information/defi" component={DefiData}/>
         </Switch>
-    </Router>
+      </Router>
   )
 };
 
