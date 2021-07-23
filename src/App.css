@@ -68,7 +68,7 @@
   color: #C80000;
 }
 .b{
-  color:black
+  color:white
 }
 table {
   font-family: arial, sans-serif;
@@ -77,11 +77,6 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
 }
