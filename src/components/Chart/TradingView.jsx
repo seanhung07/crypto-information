@@ -1,19 +1,21 @@
 import React,{useEffect,useState,useRef} from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import {ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import {Container,CssBaseline} from '@material-ui/core/';
 import '../../App.css'
 import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      margin: theme.spacing(1),
-    },
+const theme = createMuiTheme({
+  palette: {
+    type: "dark",
   },
-}));
+  typography:{
+    fontFamily:`'Baloo Tammudu 2', 'cursive';`,
+    fontSize: 15
+  },
+  background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(167,57,165,1) 100%)'
+});
 
 function Tradingview(){
-  const classes = useStyles();
   const [isPaused, setPause] = useState(false);
   const ws = useRef(null);
   const [selldatas,setSelldatas ] = useState([])
@@ -42,8 +44,10 @@ function Tradingview(){
       };
   }, [isPaused,selldatas]);
   return (
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
     <Container fixed>
-      <div className={classes.root}>
+      <div>
           <Button color="secondary" onClick={() => setPause(!isPaused)}>
               {isPaused ? "Resume" : "Pause"}
           </Button>
@@ -82,7 +86,8 @@ function Tradingview(){
           </table>
       </div>
     </div>
-    </Container>
+      </Container>
+    </ThemeProvider>
           
   );
 }
