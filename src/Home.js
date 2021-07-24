@@ -53,8 +53,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1,
-    textAlign: 'center',
+    flexGrow: 2,
+    // textAlign: 'center',
   },
 }));
 
@@ -65,7 +65,7 @@ function Home(){
     
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="static" style={{background: 'radial-gradient(circle, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
+      <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <div className="head">
@@ -77,6 +77,7 @@ function Home(){
           </Typography>
           <Box display='flex'>
             <Button component={Link} to="/order">Order Book</Button>
+            <Button component={Link} to="/draw">TradingView</Button>
         </Box>
         </Toolbar>
       </AppBar>
