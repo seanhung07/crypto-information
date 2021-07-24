@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, BrowserRouter as Router, Switch, HashRouter} from 'react-router-dom'
 import Home from './Home'
-import Order from './components/Chart/TradingView'
+import Order from './components/Chart/Order'
 
 function App(){
   return(

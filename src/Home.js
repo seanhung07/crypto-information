@@ -5,7 +5,7 @@ import CoinUpDown from './components/Chart/CoinUpDown'
 import News from './components/News/News'
 import Grid from '@material-ui/core/Grid' 
 import {ThemeProvider, createMuiTheme,makeStyles} from '@material-ui/core/styles'
-import {Container, CssBaseline,Typography} from "@material-ui/core";
+import {Container, CssBaseline,Typography,Box} from "@material-ui/core";
 import React,{useState} from 'react'
 import FearGreed from './components/Chart/FearGreed';
 import AppBar from '@material-ui/core/AppBar';
@@ -15,6 +15,7 @@ import IconButton from '@material-ui/core/IconButton';
 import logo from '../src/assets/logo.png'
 import Market from './components/Chart/Market';
 import Whale from './components/News/Whale';
+import { Link } from 'react-router-dom';
 const theme = createMuiTheme({
   palette: {
     type: "dark",
@@ -61,9 +62,10 @@ function Home(){
   const classes = useStyles();
   const [active,setActive] = useState("First")
   return (
+    
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative" style={{background: 'radial-gradient(circle, rgba(97,39,96,1) 15%, rgba(2,0,36,1) 55%)'}}>
+      <AppBar position="static" style={{background: 'radial-gradient(circle, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <div className="head">
@@ -73,6 +75,9 @@ function Home(){
           <Typography variant="h4" className={classes.title}  style={{ marginTop: 20 , marginBottom:10}}>
             Crypto Information
           </Typography>
+          <Box display='flex'>
+            <Button component={Link} to="/order">Order Book</Button>
+        </Box>
         </Toolbar>
       </AppBar>
       <Container >
