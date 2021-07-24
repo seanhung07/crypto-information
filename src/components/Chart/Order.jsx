@@ -15,7 +15,7 @@ const theme = createMuiTheme({
   background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(167,57,165,1) 100%)'
 });
 
-function Tradingview(){
+function Order(){
   const [isPaused, setPause] = useState(false);
   const ws = useRef(null);
   const [selldatas,setSelldatas ] = useState([])
@@ -92,4 +92,4 @@ function Tradingview(){
   );
 }
 
-export default Tradingview
+export default Order
