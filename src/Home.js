@@ -67,7 +67,7 @@ function Home(){
       <CssBaseline />
       <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" component={Link} to="/">
             <div className="head">
               <img src={logo} alt="logo"  width="35" height="35"/>
             </div>
