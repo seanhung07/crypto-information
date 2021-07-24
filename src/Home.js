@@ -65,7 +65,7 @@ function Home(){
     
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
+      <AppBar position="flex" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <div className="head">
@@ -81,7 +81,7 @@ function Home(){
         </Box>
         </Toolbar>
       </AppBar>
-      <Container >
+      <Container fixed>
       <Typography align='center'>
         <div className={classes.root} style={{ marginTop: 30 , marginBottom:10 }}>
             <Button variant="outlined" onClick={()=> setActive("First")}>漲跌分佈</Button>
