@@ -47,6 +47,7 @@ const theme = createMuiTheme({
       flexGrow: 2,
       // textAlign: 'center',
     },
+    
   }));
   
 
