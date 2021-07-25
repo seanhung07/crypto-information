@@ -1,5 +1,5 @@
 import React,{useEffect,useState,useRef} from 'react'
-import {ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import {Container,CssBaseline} from '@material-ui/core/';
 import '../../App.css'
 import Button from '@material-ui/core/Button';
@@ -36,8 +36,8 @@ function Order(){
       ws.current.onmessage = e => {
           if (isPaused) return;
           const message = JSON.parse(e.data);
-          console.log("a",message.data.a);
-          console.log("b",message.data.b);
+          // console.log("a",message.data.a);
+          // console.log("b",message.data.b);
           setSelldatas(message.data.a)
           setBuydatas(message.data.b)
           // console.log(datas)
