@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, BrowserRouter as Switch, HashRouter} from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch, HashRouter} from 'react-router-dom'
 import Home from './Home'
 import Order from './components/Chart/Order'
 import TradingView from './components/Chart/TradingView'
