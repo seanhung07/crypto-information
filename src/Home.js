@@ -78,6 +78,7 @@ function Home(){
           <Box display='flex'>
             <Button component={Link} to="/order">Order Book</Button>
             <Button component={Link} to="/draw">TradingView</Button>
+            <Button component={Link} to="/data">Long/Short</Button>
         </Box>
         </Toolbar>
       </AppBar>

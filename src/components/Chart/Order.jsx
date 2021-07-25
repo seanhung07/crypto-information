@@ -36,8 +36,6 @@ function Order(){
       ws.current.onmessage = e => {
           if (isPaused) return;
           const message = JSON.parse(e.data);
-          // console.log("a",message.data.a);
-          // console.log("b",message.data.b);
           setSelldatas(message.data.a)
           setBuydatas(message.data.b)
           // console.log(datas)
