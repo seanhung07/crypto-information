@@ -111,8 +111,8 @@ function Data(){
       <Pie
         data = {{
           labels: [
-            '看跌(%)',
-            '看漲(%)'
+            '空方(%)',
+            '多方(%)'
           ],
           datasets: [{
             data: data,
@@ -134,8 +134,8 @@ function Data(){
       <Pie
         data = {{
           labels: [
-            '看跌(%)',
-            '看漲(%)'
+            '空方(%)',
+            '多方(%)'
           ],
           datasets: [{
             data: ethdata,
