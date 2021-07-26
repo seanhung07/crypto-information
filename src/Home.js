@@ -65,7 +65,7 @@ function Home(){
     
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <TopNavbar/>
+      <TopNavbar title="Home"/>
       {/* <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" component={Link} to="/">

@@ -52,7 +52,7 @@ function Data(){
     <div>
          <ThemeProvider theme={theme}>
       <CssBaseline />
-      <TopNavbar/>
+      <TopNavbar title="Long/Short"/>
       <h1 style={{textAlign: 'center',marginTop: '20px'}}>BTC</h1>
       <Container fixed>
       <Pie

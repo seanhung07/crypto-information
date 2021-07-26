@@ -29,11 +29,10 @@ function Liquidation() {
         }
         fetchData()
         fetchTotal()
-        console.log(to)
         const interval=setInterval(()=>{
             fetchData();
             fetchTotal();
-        },50000)
+        },15000)
         return()=>clearInterval(interval)
         }, [to]);
     function change(x){
@@ -43,7 +42,7 @@ function Liquidation() {
     return(
         <ThemeProvider theme={theme}>
         <CssBaseline />
-        <TopNavbar/>
+        <TopNavbar title="Liquidation"/>
         <Container>
         <div style={{marginTop: '25px'}}>
             <Table striped bordered hover variant="dark">
@@ -76,7 +75,7 @@ function Liquidation() {
                     <tr key={data.id}>
                        <td>{i}</td>
                        <td>{data.exchangeName}</td>
-                       <td>{Date(data.createTime).substring(0,25)}</td>
+                       <td>{Date(data.turnoverTime).substring(0,25)}</td>
                        <td>{data.originalSymbol}</td>
                        <td>{data.price} USDT</td>
                        <td>{data.qty} {data.symbol}</td>

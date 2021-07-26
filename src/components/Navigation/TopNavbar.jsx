@@ -2,13 +2,14 @@ import React from 'react';
 import { Container, Navbar,Nav,NavDropdown } from 'react-bootstrap';
 // import ModalDialog from './ModalDialog';
 
-const TopNavbar = () => {
+const TopNavbar = ({title}) => {
 
   return (
-        <Navbar variant="dark" bg="dark" expand="lg" style={{background: 'linear-gradient(45deg, rgba(41,39,41,1) 50%, rgba(61,59,61,1) 75%, rgba(110,109,110,1) 93%, rgba(128,120,120,0.8897934173669468) 100%'}}>
+        <Navbar variant="dark" bg="dark" expand="lg" style={{background: 'linear-gradient(45deg, rgba(0,0,0,1) 17%, rgba(0,0,0,1) 33%, rgba(0,0,0,1) 46%, rgba(5,5,5,1) 56%, rgba(15,14,15,1) 69%, rgba(25,24,25,1) 86%, rgba(41,39,41,1) 100%, rgba(61,59,61,1) 100%)'}}>
           <Container fluid>
             <Navbar.Brand href="/crypto-information" style={{fontSize: '30px', marginLeft: '10px'}}>Crypto Information</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-dark-example" />
+            <Nav style={{marginTop:'10px', fontSize:'20px'}}>{title}</Nav>
             <Navbar.Collapse id="navbar-dark-example">
               <Nav>
                 <NavDropdown

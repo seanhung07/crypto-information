@@ -46,7 +46,7 @@ function Order(){
   return (
     <ThemeProvider theme={theme}>
     <CssBaseline />
-    <TopNavbar/>
+    <TopNavbar title="ETH Order Book"/>
     <Container fixed>
       <div>
           <Button color="secondary" onClick={() => setPause(!isPaused)}>
