@@ -3,6 +3,7 @@ import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import {Container,CssBaseline} from '@material-ui/core/';
 import '../../App.css'
 import Button from '@material-ui/core/Button';
+import TopNavbar from '../Navigation/TopNavbar';
 
 const theme = createMuiTheme({
   palette: {
@@ -44,6 +45,7 @@ function Order(){
   return (
     <ThemeProvider theme={theme}>
     <CssBaseline />
+    <TopNavbar/>
     <Container fixed>
       <div>
           <Button color="secondary" onClick={() => setPause(!isPaused)}>

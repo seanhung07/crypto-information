@@ -4,7 +4,7 @@ import Home from './Home'
 import Order from './components/Chart/Order'
 import TradingView from './components/Chart/TradingView'
 import Data from './components/Bybt/Data'
-import Navbar from './components/News/Navbar'
+import Navbar from './components/Navigation/TopNavbar'
 function App(){
   return(
     <HashRouter basename={process.env.PUBLIC_URL}>

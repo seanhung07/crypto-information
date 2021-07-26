@@ -5,18 +5,17 @@ import CoinUpDown from './components/Chart/CoinUpDown'
 import News from './components/News/News'
 import Grid from '@material-ui/core/Grid' 
 import {ThemeProvider, createMuiTheme,makeStyles} from '@material-ui/core/styles'
-import {Container, CssBaseline,Typography,Box} from "@material-ui/core";
+import {Container, CssBaseline,Typography} from "@material-ui/core";
 import React,{useState} from 'react'
 import FearGreed from './components/Chart/FearGreed';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+// import AppBar from '@material-ui/core/AppBar';
+// import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import logo from '../src/assets/logo.png'
+// import IconButton from '@material-ui/core/IconButton';
+// import logo from '../src/assets/logo.png'
 import Market from './components/Chart/Market';
-import Whale from './components/News/Navbar';
-import { Link } from 'react-router-dom';
-import Navbar from './components/News/Navbar';
+// import { Link } from 'react-router-dom';
+import TopNavbar from './components/Navigation/TopNavbar';
 const theme = createMuiTheme({
   palette: {
     type: "dark",
@@ -66,8 +65,8 @@ function Home(){
     
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navbar/>
-      <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
+      <TopNavbar/>
+      {/* <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" component={Link} to="/">
             <div className="head">
@@ -77,13 +76,13 @@ function Home(){
           <Typography variant="h4" className={classes.title}  style={{ marginTop: 20 , marginBottom:10}}>
             Crypto Information
           </Typography>
-          {/* <Box display='flex'>
+          <Box display='flex'>
             <Button component={Link} to="/order">Order Book</Button>
             <Button component={Link} to="/draw">TradingView</Button>
             <Button component={Link} to="/data">Long/Short</Button>
-        </Box> */}
+        </Box>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       <Container fixed>
       <Typography align='center'>
         <div className={classes.root} style={{ marginTop: 30 , marginBottom:10 }}>
@@ -105,7 +104,6 @@ function Home(){
           </Grid>
           <Grid item xs={12} sm={6}>
             <News />
-            <Whale/>
           </Grid>
         </Grid>
       </Container>
