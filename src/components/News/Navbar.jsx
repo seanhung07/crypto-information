@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
+import logo from '../../../src/assets/logo.png';
 // import ModalDialog from './ModalDialog';
 
 const useStyles = makeStyles(theme => ({
@@ -30,7 +32,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
       <Toolbar>
         <IconButton
           edge="start"
@@ -38,14 +40,16 @@ const Navbar = () => {
           aria-label="menu"
           className={classes.menuButton}
         >
-          <MenuIcon />
+          <div className="head">
+              <img src={logo} alt="logo"  width="35" height="35"/>
+          </div>
         </IconButton>
-        <Typography variant="h6" className={classes.title}>
-          Title
+        <Typography variant="h5" className={classes.title} style={{ marginTop: 20 , marginBottom:10}}>
+          Crypto Information
         </Typography>
-        <Button color="inherit" onClick={handleOpen}>
-          Signup
-        </Button>
+        <Button component={Link} to="/data">Long/Short</Button>
+        <Button component={Link} to="/order">Order Book</Button>
+        <Button component={Link} to="/draw">TradingView</Button>
       </Toolbar>
       {/* <ModalDialog open={open} handleClose={handleClose} /> */}
     </AppBar>

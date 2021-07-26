@@ -16,6 +16,7 @@ import logo from '../src/assets/logo.png'
 import Market from './components/Chart/Market';
 import Whale from './components/News/Navbar';
 import { Link } from 'react-router-dom';
+import Navbar from './components/News/Navbar';
 const theme = createMuiTheme({
   palette: {
     type: "dark",
@@ -65,6 +66,7 @@ function Home(){
     
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Navbar/>
       <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" component={Link} to="/">
