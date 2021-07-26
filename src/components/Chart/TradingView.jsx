@@ -73,7 +73,7 @@ function TradingView() {
         </Box>
         </Toolbar>
       </AppBar>
-            <AdvancedChart widgetPropsAny={{"hotlist": true,"calendar": true,"details": true,"style": "1","locale": "zh_TW", "width": "100%","height": "830","symbol": "BINANCE:ETHUSDT","interval": "15","watchlist": [
+            <AdvancedChart widgetPropsAny={{"hotlist": true,"calendar": true,"details": true,"style": "1","locale": "zh_TW", "width": "100%","height": "800","symbol": "BINANCE:ETHUSDT","interval": "15","watchlist": [
                 "BINANCE:BTCUSDT","BINANCE:ETHUSDT","DJI","BINANCE:MATICUSDT","BINANCE:BCHUSDT","BINANCE:LTCUSDT","BINANCE:AAVEUSDT","BINANCE:UNIUSDT","BINANCE:SOLUSDT","BINANCE:CTSIUSDT","BINANCE:ADAUSDT","BINANCE:XRPUSDT",
                 "BINANCE:DOGEUSDT","BINANCE:LINKUSDT","BINANCE:ETCUSDT","BINANCE:EOSUSDT","BINANCE:TRXUSDT","BINANCE:CAKEUSDT","BINANCE:FILUSDT","BINANCE:ENJUSDT","BINANCE:CHZUSDT","BINANCE:PERPUSDT","BINANCE:YFIUSDT","BINANCE:AVAXUSDT",
                 "BINANCE:CRVUSDT","BINANCE:KSMUSDT","BINANCE:FTTUSDT","BINANCE:SUSHIUSDT","BINANCE:FLOWUSDT","BINANCE:DOTUSDT","BINANCE:ALICEUSDT","BINANCE:CHRUSDT","BINANCE:LUNAUSDT","BINANCE:RUNEUSDT","BINANCE:BAKEUSDT","BINANCE:VETUSDT","BINANCE:CHZUSDT"
