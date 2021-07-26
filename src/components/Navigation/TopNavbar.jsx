@@ -19,6 +19,7 @@ const TopNavbar = () => {
                   <NavDropdown.Item href="/crypto-information/#/order">ETH Order Book</NavDropdown.Item>
                   <NavDropdown.Item href="/crypto-information/#/draw">TradingView</NavDropdown.Item>
                   <NavDropdown.Item href="/crypto-information/#/data">Long/Short</NavDropdown.Item>
+                  <NavDropdown.Item href="/crypto-information/#/liquidation">Liquidation</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>

@@ -4,6 +4,7 @@ import {Container,CssBaseline} from '@material-ui/core/';
 import '../../App.css'
 import Button from '@material-ui/core/Button';
 import TopNavbar from '../Navigation/TopNavbar';
+import {Table} from 'react-bootstrap'
 
 const theme = createMuiTheme({
   palette: {
@@ -51,28 +52,15 @@ function Order(){
           <Button color="secondary" onClick={() => setPause(!isPaused)}>
               {isPaused ? "Resume" : "Pause"}
           </Button>
-          <div className='rowC'> 
-          <table>
-            <tr>
-              <th>Sell</th>
-              <th>Quantity</th>
-            </tr>
-            {selldatas.map(
-            data =>{
-              return(
-               <tr>
-                <td className={data[1] > 100 ? 'r' : 'b' }> {Number.parseFloat(data[0]).toFixed(2)} </td>
-                <td className={data[1] > 100 ? 'r' : 'b' }> {Number.parseFloat(data[1]).toFixed(2)} </td>
+          <div className="rowC">
+          <Table striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>Buy</th>
+                <th>Buy Quantity</th>
               </tr>
-              )
-            }
-          )}
-          </table>
-          <table>
-            <tr>
-              <th>Buy</th>
-              <th>Quantity</th>
-            </tr>
+            </thead>
+            <tbody>
             {buydatas.map(
             data =>{
               return(
@@ -83,8 +71,29 @@ function Order(){
               )
             }
           )}
-          </table>
-      </div>
+            </tbody>
+          </Table>
+          <Table striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>Sell</th>
+                <th>Sell Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+            {selldatas.map(
+            data =>{
+              return(
+               <tr>
+                <td className={data[1] > 100 ? 'r' : 'b' }> {Number.parseFloat(data[0]).toFixed(2)} </td>
+                <td className={data[1] > 100 ? 'r' : 'b' }> {Number.parseFloat(data[1]).toFixed(2)} </td>
+              </tr>
+              )
+            }
+          )}
+            </tbody>
+          </Table>
+          </div>
     </div>
       </Container>
     </ThemeProvider>
