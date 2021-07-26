@@ -77,11 +77,11 @@ function Home(){
           <Typography variant="h4" className={classes.title}  style={{ marginTop: 20 , marginBottom:10}}>
             Crypto Information
           </Typography>
-          <Box display='flex'>
+          {/* <Box display='flex'>
             <Button component={Link} to="/order">Order Book</Button>
             <Button component={Link} to="/draw">TradingView</Button>
             <Button component={Link} to="/data">Long/Short</Button>
-        </Box>
+        </Box> */}
         </Toolbar>
       </AppBar>
       <Container fixed>
