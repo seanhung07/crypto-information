@@ -13,7 +13,7 @@ const TopNavbar = () => {
               <Nav>
                 <NavDropdown
                   id="nav-dropdown-dark-example"
-                  title="Dropdown"
+                  title="More Information"
                   menuVariant="dark"
                 >
                   <NavDropdown.Item href="/crypto-information/#/order">ETH Order Book</NavDropdown.Item>
