@@ -14,7 +14,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import logo from '../src/assets/logo.png'
 import Market from './components/Chart/Market';
-import Whale from './components/News/Whale';
+import Whale from './components/News/Navbar';
 import { Link } from 'react-router-dom';
 const theme = createMuiTheme({
   palette: {
