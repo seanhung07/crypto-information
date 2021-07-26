@@ -48,8 +48,8 @@ const Navbar = () => {
           Crypto Information
         </Typography>
         <Button component={Link} to="/data">Long/Short</Button>
-        <Button component={Link} to="/order">Order Book</Button>
-        <Button component={Link} to="/draw">TradingView</Button>
+        {/* <Button component={Link} to="/order">Order Book</Button>
+        <Button component={Link} to="/draw">TradingView</Button> */}
       </Toolbar>
       {/* <ModalDialog open={open} handleClose={handleClose} /> */}
     </AppBar>
