@@ -8,13 +8,9 @@ import {ThemeProvider, createMuiTheme,makeStyles} from '@material-ui/core/styles
 import {Container, CssBaseline,Typography} from "@material-ui/core";
 import React,{useState} from 'react'
 import FearGreed from './components/Chart/FearGreed';
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
+
 import Button from '@material-ui/core/Button';
-// import IconButton from '@material-ui/core/IconButton';
-// import logo from '../src/assets/logo.png'
 import Market from './components/Chart/Market';
-// import { Link } from 'react-router-dom';
 import TopNavbar from './components/Navigation/TopNavbar';
 const theme = createMuiTheme({
   palette: {

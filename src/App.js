@@ -4,7 +4,6 @@ import Home from './Home'
 import Order from './components/Chart/Order'
 import TradingView from './components/Chart/TradingView'
 import Data from './components/Bybt/Data'
-import Navbar from './components/Navigation/TopNavbar'
 import Liquidation from './components/Bybt/Liquidation';
 function App(){
   return(

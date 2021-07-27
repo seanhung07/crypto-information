@@ -32,12 +32,28 @@ function Liquidation() {
         const interval=setInterval(()=>{
             fetchData();
             fetchTotal();
-        },15000)
+        },30000)
         return()=>clearInterval(interval)
         }, [to]);
     function change(x){
         x = ""+x
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+    function convert(x){
+        var date = new Date(x);
+        // Hours part from the timestamp
+        var hours = date.getHours();
+        // Minutes part from the timestamp
+        var minutes = "0" + date.getMinutes();
+        // Seconds part from the timestamp
+        var seconds = "0" + date.getSeconds();
+        var day = date.getDate()
+        var month = date.getMonth()
+
+        // Will display time in 10:30:23 format
+        var formattedTime = month+"/"+day+" " +hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+        return formattedTime;
     }
     return(
         <ThemeProvider theme={theme}>
@@ -75,7 +91,7 @@ function Liquidation() {
                     <tr key={data.id}>
                        <td>{i}</td>
                        <td>{data.exchangeName}</td>
-                       <td>{Date(data.turnoverTime).substring(0,25)}</td>
+                       <td>{convert(data.turnoverTime)}</td>
                        <td>{data.originalSymbol}</td>
                        <td>{data.price} USDT</td>
                        <td>{data.qty} {data.symbol}</td>
