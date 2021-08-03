@@ -1,13 +1,13 @@
 import axios from 'axios'
-import React,{useEffect} from 'react';
+import React,{useEffect,useState} from 'react';
 import {Pie,Chart} from 'react-chartjs-2'
 
 
 function Market(){
     Chart.defaults.color = '#fefefe'
     Chart.defaults.borderColor = '#686868'
-    const [data,setData] = React.useState([])
-    const chart= () =>{
+    const [data,setData] = useState([])
+    const chart = () =>{
         async function fetchData(){
             let market = []
             const res = await axios.get("https://dncapi.bqrank.net/api/v2/news/action_stat?webp=1")
