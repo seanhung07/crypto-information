@@ -8,7 +8,7 @@ const TopNavbar = ({title}) => {
             <Navbar.Brand href="/crypto-information" style={{fontSize: '30px', marginLeft: '10px'}}>Crypto Information</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-dark-example" />
             <Nav style={{marginTop:'10px', fontSize:'20px'}}>{title}</Nav>
-            <Navbar.Collapse id="navbar-dark-example">
+            <Navbar.Collapse id="navbar-dark-example" className="justify-content-end">
               <Nav>
                 <NavDropdown
                   id="nav-dropdown-dark-example"

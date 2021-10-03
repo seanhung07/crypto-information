@@ -62,23 +62,6 @@ function Home(){
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <TopNavbar title="Home"/>
-      {/* <AppBar position="static" style={{background: 'linear-gradient(45deg, rgba(117,61,111,1) 1%, rgba(62,62,69,1) 69%)'}}>
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" component={Link} to="/">
-            <div className="head">
-              <img src={logo} alt="logo"  width="35" height="35"/>
-            </div>
-          </IconButton>
-          <Typography variant="h4" className={classes.title}  style={{ marginTop: 20 , marginBottom:10}}>
-            Crypto Information
-          </Typography>
-          <Box display='flex'>
-            <Button component={Link} to="/order">Order Book</Button>
-            <Button component={Link} to="/draw">TradingView</Button>
-            <Button component={Link} to="/data">Long/Short</Button>
-        </Box>
-        </Toolbar>
-      </AppBar> */}
       <Container fixed>
       <Typography align='center'>
         <div className={classes.root} style={{ marginTop: 30 , marginBottom:10 }}>
