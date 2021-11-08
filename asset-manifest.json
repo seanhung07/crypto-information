@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/crypto-information/static/css/main.381ddcc0.chunk.css",
-    "main.js": "/crypto-information/static/js/main.1898526c.chunk.js",
-    "main.js.map": "/crypto-information/static/js/main.1898526c.chunk.js.map",
+    "main.js": "/crypto-information/static/js/main.063d414f.chunk.js",
+    "main.js.map": "/crypto-information/static/js/main.063d414f.chunk.js.map",
     "runtime-main.js": "/crypto-information/static/js/runtime-main.9a280ab7.js",
     "runtime-main.js.map": "/crypto-information/static/js/runtime-main.9a280ab7.js.map",
     "static/css/2.d45d6843.chunk.css": "/crypto-information/static/css/2.d45d6843.chunk.css",
-    "static/js/2.b4acff5d.chunk.js": "/crypto-information/static/js/2.b4acff5d.chunk.js",
-    "static/js/2.b4acff5d.chunk.js.map": "/crypto-information/static/js/2.b4acff5d.chunk.js.map",
+    "static/js/2.f0e13178.chunk.js": "/crypto-information/static/js/2.f0e13178.chunk.js",
+    "static/js/2.f0e13178.chunk.js.map": "/crypto-information/static/js/2.f0e13178.chunk.js.map",
     "static/js/3.cead2909.chunk.js": "/crypto-information/static/js/3.cead2909.chunk.js",
     "static/js/3.cead2909.chunk.js.map": "/crypto-information/static/js/3.cead2909.chunk.js.map",
     "index.html": "/crypto-information/index.html",
     "static/css/2.d45d6843.chunk.css.map": "/crypto-information/static/css/2.d45d6843.chunk.css.map",
     "static/css/main.381ddcc0.chunk.css.map": "/crypto-information/static/css/main.381ddcc0.chunk.css.map",
-    "static/js/2.b4acff5d.chunk.js.LICENSE.txt": "/crypto-information/static/js/2.b4acff5d.chunk.js.LICENSE.txt"
+    "static/js/2.f0e13178.chunk.js.LICENSE.txt": "/crypto-information/static/js/2.f0e13178.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9a280ab7.js",
     "static/css/2.d45d6843.chunk.css",
-    "static/js/2.b4acff5d.chunk.js",
+    "static/js/2.f0e13178.chunk.js",
     "static/css/main.381ddcc0.chunk.css",
-    "static/js/main.1898526c.chunk.js"
+    "static/js/main.063d414f.chunk.js"
   ]
 }
